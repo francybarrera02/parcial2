@@ -1,38 +1,10 @@
-/*import express from 'express';
-
-const app = express();
-const port = process.env.PORT || 3000;
-// Middleware para analizar el cuerpo de las solicitudes
-//ruta raiz
-app.get('/', (req, res) => {
-    res.send('Bienvenido a la página principal!')
-}
-);
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { obras } from './routes/obras.js';
-
-//agregar el router
-//soporta get y post delete y put
-//agrega las diagonales en las rutas que usamos
-app.use('/', routes); // Usar las rutas definidas en el archivo index.js
-
-app.use(express.static('public')); // Servir archivos estáticos desde la carpeta 'public'
-
-app.listen(port, () => {
-    console.log(`El servidor está funcionando en el puerto ${port}`);
-}
-);
-//app.use(express.json()); // Para analizar solicitudes JSON
-
-app.set('view engine', 'pug'); // Establecer EJS como motor de plantillas*/
-
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { obras } from './routes/obras.js';
 
 const app = express();
+
 const PORT = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
@@ -43,6 +15,7 @@ app.use((req, res, next) => {
   console.log(`[${new Date().toISOString()}] Visitando: ${req.originalUrl}`);
   next();
 });
+
 
 // Archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
@@ -62,6 +35,8 @@ app.get('/obra/:id', (req, res) => {
 app.get('/acerca', (req, res) => res.render('acerca'));
 app.get('/inicio', (req, res) => res.redirect('/'));
 
+
+
 // Servidor
-//app.listen(PORT, () => console.log(`Servidor escuchando en http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Servidor escuchando en http://localhost:${PORT}`));
 

@@ -39,4 +39,4 @@ export const obras = [
       descripcion: 'Una danza entre tecnología y emoción.',
       imagen: '/img/obra5.jpg'
     }
-  ];  
+  ];
