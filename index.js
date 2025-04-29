@@ -63,5 +63,5 @@ app.get('/acerca', (req, res) => res.render('acerca'));
 app.get('/inicio', (req, res) => res.redirect('/'));
 
 // Servidor
-app.listen(PORT, () => console.log(`Servidor escuchando en http://localhost:${PORT}`));
+//app.listen(PORT, () => console.log(`Servidor escuchando en http://localhost:${PORT}`));
 
