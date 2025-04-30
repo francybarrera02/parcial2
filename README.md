@@ -4,7 +4,7 @@
 
 MuseArte es una aplicación web construida con **Node.js**, **Express** y **Pug** que simula un museo virtual de arte moderno.  
 El proyecto presenta una galería de obras ficticias, con detalles como título, autor, año y descripción.  
-Fue desarrollado como parte de una práctica académica.
+Fue desarrollado como parte de una práctica académica..
 
 ## Características
 
